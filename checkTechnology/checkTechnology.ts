@@ -1,4 +1,4 @@
-import { Technology } from "./models/models";
+import { Technology } from "../models/models";
 
 async function checkTechnology(value:any) {
     const newTechnology:any = await Technology.findOne({

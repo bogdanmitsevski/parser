@@ -1,8 +1,8 @@
-import puppeteerClass from '../parser/parser';
+import technologyFunc from '../parser/parserTechnology';
 class customerController {
     async parseTechnologies (ctx:any, next:any) {
         try {
-           puppeteerClass.parserFunc();
+           technologyFunc.parserFunc();
         }
         catch(e) {
             console.log(e);

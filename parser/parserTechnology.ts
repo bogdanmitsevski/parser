@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import { Technology } from '../models/models';
-import checkTechnology from '../checkTechnology';
-class puppeteerClass {
+import checkTechnology from '../checkTechnology/checkTechnology';
+class technologyFunc {
     async parserFunc() {
         try {
             const browser = await puppeteer.launch({
@@ -32,4 +32,4 @@ class puppeteerClass {
     }
 }
 
-export default new puppeteerClass();
+export default new technologyFunc();

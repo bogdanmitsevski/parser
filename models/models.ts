@@ -22,7 +22,8 @@ const Customer = Sequelize.define('customers',{
 
 const Price = Sequelize.define('pricies',{
     id: {type:DataTypes.INTEGER, autoIncrement:true, primaryKey:true, allowNull: false},
-    numeric: {type:DataTypes.INTEGER, allowNull:false}
+    numeric: {type:DataTypes.INTEGER, allowNull:false},
+    addedBy: {type:DataTypes.INTEGER, allowNull:false}
 });
 
 User.hasMany(Customer);
