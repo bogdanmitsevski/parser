@@ -1,10 +1,10 @@
 import jwtDecode from 'jwt-decode';
 
-function decodeToken (token:any){
+function decodeToken(token: any) {
     try {
         return jwtDecode(token);
     }
-    catch(e) {
+    catch (e) {
         return e;
     }
 }

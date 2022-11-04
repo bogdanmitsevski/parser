@@ -27,6 +27,13 @@
     "@types/jsonwebtoken": "^8.5.9",
     "@types/koa": "^2.13.5",
     "@types/koa-bodyparser": "^4.3.9",
-    "@types/koa-router": "^7.4.4"
+    "@types/koa-router": "^7.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.4.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^4.8.4"
   }
 }

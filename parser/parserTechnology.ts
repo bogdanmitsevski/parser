@@ -1,9 +1,8 @@
 import puppeteer from 'puppeteer';
-import { Technology } from '../models/models';
-import checkTechnology from '../checkTechnology/checkTechnology';
-class technologyFunc {
-    async parserFunc() {
+class parseTech {
+    async parseTechnologyFunc() {
         try {
+            let technologyArray: any = [];
             const browser = await puppeteer.launch({
                 headless: false
             });
@@ -12,18 +11,13 @@ class technologyFunc {
             await page.waitForTimeout(3000);
             for (let i = 1; i <= 3; i++) {
                 page.$eval(`.row > .col-sm-4:nth-child(${i}) > h2:first-child`, (e: any) => e.innerText).then((value: any) => {
-                    console.log(value, typeof (value));
-                    checkTechnology(value);
-                    const newTechnology: any = Technology.create({
-                        name: value,
-                        addedBy: 2
-                    });
-                    newTechnology.save();
+                    technologyArray.push(value);
                 }).catch(function (e: any) {
                     console.log(e);
                 });
             }
             await browser.close();
+            return technologyArray;
         }
         catch (e) {
             console.log(e);
@@ -32,4 +26,4 @@ class technologyFunc {
     }
 }
 
-export default new technologyFunc();
+export default new parseTech();
